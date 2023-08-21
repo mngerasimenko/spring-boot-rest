@@ -1,6 +1,7 @@
-package ru.mngerasimenko.employee.rest.service;
+package ru.mngerasimenko.springboot.service;
 
-import ru.mngerasimenko.employee.rest.entity.Employee;
+
+import ru.mngerasimenko.springboot.entity.Employee;
 
 import java.util.List;
 

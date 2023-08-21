@@ -1,10 +1,10 @@
-package ru.mngerasimenko.employee.rest.service;
+package ru.mngerasimenko.springboot.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.mngerasimenko.employee.rest.dao.EmployeeDAO;
-import ru.mngerasimenko.employee.rest.entity.Employee;
+import ru.mngerasimenko.springboot.dao.EmployeeDAO;
+import ru.mngerasimenko.springboot.entity.Employee;
 
 import java.util.List;
 

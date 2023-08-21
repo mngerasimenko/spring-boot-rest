@@ -1,4 +1,4 @@
-package ru.mngerasimenko.employee.rest.entity;
+package ru.mngerasimenko.springboot.entity;
 
 import javax.persistence.*;
 

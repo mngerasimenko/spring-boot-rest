@@ -1,9 +1,9 @@
-package ru.mngerasimenko.employee.rest.controller;
+package ru.mngerasimenko.springboot.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import ru.mngerasimenko.employee.rest.entity.Employee;
-import ru.mngerasimenko.employee.rest.service.EmployeeService;
+import ru.mngerasimenko.springboot.entity.Employee;
+import ru.mngerasimenko.springboot.service.EmployeeService;
 
 import java.util.List;
 
@@ -24,11 +24,8 @@ public class EmployeeRESTController {
 	}
 
 	@GetMapping("/employees/{id}")
-	public Employee getEmployee(@PathVariable int id) throws NoSuchFieldException {
+	public Employee getEmployee(@PathVariable int id) {
 		Employee employee = service.getById(id);
-		if (employee == null) {
-			throw new NoSuchFieldException("There is no employee with ID = " + id + " in database");
-		}
 
 		return employee;
 	}
@@ -48,11 +45,7 @@ public class EmployeeRESTController {
 	}
 
 	@DeleteMapping("/employees/{id}")
-	public String deleteEmployee(@PathVariable int id) throws NoSuchFieldException {
-		if (service.getById(id) == null) {
-			throw new NoSuchFieldException("There is no employee with ID = " + id + " in database");
-		}
-
+	public String deleteEmployee(@PathVariable int id) {
 		service.delete(id);
 
 		return "Employee with ID = " + id + " was deleted";

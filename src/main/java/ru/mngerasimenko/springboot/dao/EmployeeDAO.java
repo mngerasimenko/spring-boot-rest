@@ -1,11 +1,12 @@
-package ru.mngerasimenko.employee.rest.dao;
+package ru.mngerasimenko.springboot.dao;
 
-import ru.mngerasimenko.employee.rest.entity.Employee;
+import ru.mngerasimenko.springboot.entity.Employee;
 
 import java.util.List;
 
 
 public interface EmployeeDAO {
+
 	List<Employee> getAll();
 
 	void save(Employee employee);
